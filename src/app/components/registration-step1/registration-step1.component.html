@@ -1,6 +1,6 @@
 <div id="personal-details" [formGroup]="regForm">
   <div class="form-group col-md-4" formGroupName="personalDetails">
-    <label>Firstname</label>
+    <label>Firstname*</label>
     <input type="text" class="form-control" formControlName="firstname">
   </div>
   <div class="form-group col-md-4" formGroupName="personalDetails">
@@ -8,9 +8,9 @@
     <input type="text" class="form-control" formControlName="mi">
   </div>
   <div class="form-group col-md-4" formGroupName="personalDetails">
-    <label>Lastname</label>
+    <label>Lastname*</label>
     <input type="text" class="form-control" formControlName="lastname">
   </div>
 </div>
 <br/>
-<button type="button" matStepperNext>Next</button>
+<button type="button" matStepperNext (click)="step1Submitted()">Next</button>

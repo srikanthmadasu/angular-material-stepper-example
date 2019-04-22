@@ -1,6 +1,6 @@
 <div id="contact-details" [formGroup]="regForm">
   <div class="form-group col-md-4" formGroupName="contactDetails">
-    <label>Email</label>
+    <label>Email*</label>
     <input type="text" class="form-control" formControlName="email">
   </div>
   <div class="form-group col-md-4" formGroupName="contactDetails">
@@ -11,4 +11,4 @@
 <br/>
 <button type="button" matStepperPrevious>Back</button>
 &nbsp;
-<button type="button" matStepperNext>Next</button>
+<button type="button" matStepperNext (click)="step2Submitted()">Next</button>

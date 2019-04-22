@@ -1,18 +1,16 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+  <h1>Welcome to {{ title }}!</h1>
 </div>
-
 <div id="registration" class="conatiner col-md-12">
   <form id="regForm" [formGroup]="registrationForm">
-    <mat-horizontal-stepper #stepper>
-      <mat-step formGroupName="personalDetails">
+    <mat-horizontal-stepper #stepper linear>
+      <mat-step formGroupName="personalDetails" 
+        [stepControl]="registrationForm.get('personalDetails')">
         <ng-template matStepLabel>Enter Personal Details</ng-template>
         <app-registration-step1 [regForm]="registrationForm"></app-registration-step1>
       </mat-step>
-      <mat-step formGroupName="contactDetails">
+      <mat-step formGroupName="contactDetails"
+      [stepControl]="registrationForm.get('contactDetails')">
         <ng-template matStepLabel>Enter Contact Details</ng-template>
         <app-registration-step2 [regForm]="registrationForm"></app-registration-step2>
       </mat-step>
